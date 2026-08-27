@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Leer Vrienden — Studiebegeleiding, Cito & Examentraining in Ridderkerk</title>
+<meta name="description" content="Persoonlijke studiebegeleiding, Cito-training en examentraining in Ridderkerk. Wij maken leren overzichtelijk, haalbaar en écht leuk. Plan een gratis proefles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFAE2;
+    --paper-2:#F4EEDA;
+    --card:#FFFFFF;
+    --ink:#17281C;
+    --body:#4A554C;
+    --muted:#7A8479;
+    --green:#27953A;
+    --green-600:#1E7A2E;
+    --green-050:#E8F3E9;
+    --green-100:#D3E9D6;
+    --line:rgba(23,40,28,.12);
+    --line-2:rgba(23,40,28,.08);
+    --dark:#132018;
+    --dark-2:#1B2C21;
+    --dark-line:rgba(255,255,255,.12);
+    --shadow-sm:0 1px 2px rgba(23,40,28,.05), 0 6px 20px rgba(23,40,28,.04);
+    --shadow-md:0 2px 4px rgba(23,40,28,.06), 0 18px 40px rgba(23,40,28,.08);
+    --radius:22px;
+    --radius-lg:28px;
+    --maxw:1200px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{color:var(--ink);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--green);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--green);display:inline-flex;align-items:center;gap:.6em;
+  }
+  .eyebrow.on-dark{color:#7FD08C}
+  .accent{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    color:var(--green);letter-spacing:-.01em;
+  }
+  .hl{background:var(--green);color:#fff;padding:.02em .28em;border-radius:8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;justify-content:center;
+    font-weight:700;font-size:1rem;line-height:1;cursor:pointer;border:0;
+    padding:1.05em 1.6em;border-radius:999px;transition:.25s var(--ease);
+    font-family:inherit;white-space:nowrap;
+  }
+  .btn .arw{transition:transform .25s var(--ease)}
+  .btn:hover .arw{transform:translateX(4px)}
+  .btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(39,149,58,.28)}
+  .btn-primary:hover{background:var(--green-600);box-shadow:0 12px 30px rgba(39,149,58,.36);transform:translateY(-1px)}
+  .btn-ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+  .btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-outline:hover{background:var(--ink);color:var(--paper)}
+  .btn-block{width:100%}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;transition:.3s var(--ease)}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:14px 24px;max-width:calc(var(--maxw) + 24px);margin:0 auto;
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;
+    background:rgba(255,250,226,.82);backdrop-filter:blur(14px);
+    border:1px solid var(--line-2);border-radius:999px;
+    padding:10px 12px 10px 20px;box-shadow:var(--shadow-sm);
+  }
+  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .brand img{height:34px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:4px}
+  .nav-links a{
+    font-size:.95rem;font-weight:600;color:var(--ink);padding:.55em .9em;border-radius:999px;
+    transition:.2s var(--ease);opacity:.82;
+  }
+  .nav-links a:hover{background:var(--green-050);opacity:1;color:var(--green-600)}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .nav-phone{font-weight:700;color:var(--ink);font-size:.95rem;padding:.5em .7em;border-radius:999px}
+  .nav-phone:hover{background:var(--green-050)}
+  .burger{display:none;background:var(--card);border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+  .burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.25s var(--ease)}
+  .burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  .mobile-menu{display:none;padding:0 24px}
+  .mobile-menu.open{display:block}
+  .mobile-menu .mm-inner{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    margin-top:8px;padding:12px;box-shadow:var(--shadow-md);
+  }
+  .mobile-menu a{display:block;padding:.85em 1em;font-weight:600;color:var(--ink);border-radius:12px}
+  .mobile-menu a:hover{background:var(--green-050)}
+  .mobile-menu .btn{margin-top:8px}
+
+  section{position:relative}
+  .pad{padding:88px 0}
+  .pad-sm{padding:64px 0}
+
+  /* HERO */
+  .hero{padding:52px 0 72px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero-copy,.hero-visual{min-width:0}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.035em}
+  .hero h1 .accent{font-size:.96em;display:inline-block}
+  .hero .lead{font-size:1.18rem;color:var(--body);margin:22px 0 30px;max-width:34ch}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .rating-row{display:flex;align-items:center;gap:12px;margin-top:30px}
+  .stars{color:#E9A23B;letter-spacing:2px;font-size:1.05rem}
+  .rating-row b{color:var(--ink)}
+  .rating-row span{color:var(--muted);font-size:.95rem}
+  .mini-stats{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+  .mini-stat{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:14px 18px;box-shadow:var(--shadow-sm);flex:1;min-width:140px;
+  }
+  .mini-stat b{font-size:1.5rem;color:var(--green);font-weight:800;letter-spacing:-.03em}
+  .mini-stat span{display:block;font-size:.86rem;color:var(--muted);margin-top:2px}
+
+  /* Hero visual */
+  .hero-visual{position:relative}
+  .photo{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    background:linear-gradient(145deg,#E7EEDD 0%,#CFE3CE 55%,#Bcdcbd 100%);
+    border:1px solid var(--line-2);
+  }
+  .photo::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(120% 80% at 80% 10%, rgba(255,255,255,.35), transparent 60%);pointer-events:none}
+  .photo .ph-label{
+    position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(255,255,255,.85);
+    backdrop-filter:blur(6px);color:var(--ink);font-size:.74rem;font-weight:600;
+    padding:.4em .8em;border-radius:999px;border:1px solid var(--line-2);
+  }
+  .photo svg.ph-motif{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-main{aspect-ratio:4/5}
+  .hero-inset{
+    position:absolute;right:-14px;bottom:-14px;width:46%;aspect-ratio:1/1;
+    border:5px solid var(--paper);box-shadow:var(--shadow-md);z-index:3;
+    background:linear-gradient(145deg,#DDE9F0,#C6D8E6);
+  }
+  .hero-pill{
+    position:absolute;top:16px;right:16px;z-index:4;background:var(--green);color:#fff;
+    font-weight:700;font-size:.9rem;padding:.7em 1.15em;border-radius:999px;
+    box-shadow:0 8px 24px rgba(39,149,58,.35);display:flex;align-items:center;gap:.5em;
+  }
+
+  /* Marquee */
+  .marquee{background:var(--green);color:#fff;overflow:hidden;padding:16px 0;white-space:nowrap}
+  .marquee-track{display:inline-flex;gap:0;animation:scroll 26s linear infinite;will-change:transform}
+  .marquee-track span{font-weight:700;font-size:1.02rem;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+  .marquee-track span::after{content:"✦";opacity:.7;font-size:.7em}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* Stats band */
+  .stats{background:var(--paper-2)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:14px 28px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:0;padding-left:0}
+  .stat b{font-size:clamp(2.2rem,4vw,3rem);color:var(--ink);font-weight:800;letter-spacing:-.04em;display:block;line-height:1}
+  .stat span{color:var(--muted);font-size:.98rem;margin-top:8px;display:block}
+
+  /* Section head */
+  .sec-head{max-width:640px}
+  .sec-head.center{margin:0 auto;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);margin-top:16px}
+  .sec-head p{margin-top:16px;font-size:1.1rem;color:var(--body)}
+  .sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+  .svc-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:34px;transition:.3s var(--ease);position:relative;overflow:hidden;
+  }
+  .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--green-100)}
+  .svc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+  .svc-num{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--green);font-size:1.05rem;letter-spacing:.05em}
+  .svc-ico{width:52px;height:52px;border-radius:15px;background:var(--green-050);display:flex;align-items:center;justify-content:center;color:var(--green-600)}
+  .svc-ico svg{width:26px;height:26px}
+  .svc-card h3{font-size:1.55rem;font-weight:800}
+  .svc-sub{font-size:.92rem;color:var(--green-600);font-weight:600;margin-top:4px}
+  .svc-card>p{margin:14px 0 20px;color:var(--body);font-size:1.02rem}
+  .svc-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:24px}
+  .svc-list li{display:flex;align-items:center;gap:11px;font-size:1rem;color:var(--ink);font-weight:500}
+  .check{flex-shrink:0;width:24px;height:24px;border-radius:999px;background:var(--green-050);color:var(--green-600);display:flex;align-items:center;justify-content:center}
+  .check svg{width:14px;height:14px}
+  .more{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--green-600);border-bottom:2px solid var(--green-100);padding-bottom:3px;transition:.2s var(--ease)}
+  .more:hover{border-color:var(--green);gap:11px}
+
+  /* Approach */
+  .approach-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+  .approach-visual{position:relative}
+  .approach-visual .photo{aspect-ratio:3/4}
+  .badge-100{
+    position:absolute;left:24px;bottom:-22px;background:var(--green);color:#fff;
+    border-radius:18px;padding:18px 26px;box-shadow:0 14px 34px rgba(39,149,58,.32);z-index:3;
+    display:flex;align-items:baseline;gap:10px;
+  }
+  .badge-100 b{font-size:1.8rem;font-weight:800;letter-spacing:-.03em}
+  .badge-100 span{font-size:.9rem;opacity:.92;font-weight:500}
+  .steps{margin-top:36px}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+  .step:first-child{border-top:0;padding-top:0}
+  .step-num{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--green);font-size:2rem;line-height:1}
+  .step h3{font-size:1.3rem;font-weight:800;margin-bottom:6px}
+  .step p{color:var(--body)}
+
+  /* About */
+  .about{background:var(--paper-2)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about-lead{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.5rem;color:var(--ink);line-height:1.35;margin:18px 0 22px}
+  .about p+p{margin-top:16px}
+  .team-card{display:flex;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .team-av{width:60px;height:60px;border-radius:999px;background:linear-gradient(145deg,#CFE3CE,#A9CBA9);flex-shrink:0;border:2px solid #fff;box-shadow:var(--shadow-sm);overflow:hidden}
+  .team-av img{width:100%;height:100%;object-fit:cover;display:block}
+  .team-card b{color:var(--ink);font-size:1.05rem;display:block}
+  .team-card span{color:var(--muted);font-size:.92rem}
+  .values{display:flex;flex-direction:column}
+  .value{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:24px 0;border-top:1px solid var(--line)}
+  .value:first-child{border-top:0;padding-top:0}
+  .value-num{color:var(--green);font-weight:700;font-size:.9rem;letter-spacing:.1em;padding-top:5px}
+  .value h3{font-size:1.25rem;font-weight:800;margin-bottom:4px}
+  .value p{color:var(--body);font-size:1rem}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,280px));justify-content:center;gap:28px;margin-top:44px}
+  .tm-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center;transition:.3s var(--ease)}
+  .tm-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--green-100)}
+  .tm-photo{aspect-ratio:1/1;border-radius:16px;overflow:hidden;margin-bottom:18px;background:linear-gradient(145deg,#E7EEDD 0%,#CFE3CE 55%,#Bcdcbd 100%)}
+  .tm-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .tm-name{display:block;font-size:1.15rem;font-weight:800;color:var(--ink)}
+  .tm-role{display:block;font-size:.92rem;color:var(--green-600);font-weight:600;margin-top:2px}
+
+  /* Testimonials (dark) */
+  .testi{background:var(--dark);color:#fff}
+  .testi h2{color:#fff}
+  .rating-pill{display:inline-flex;align-items:center;gap:12px;background:var(--dark-2);border:1px solid var(--dark-line);border-radius:999px;padding:.7em 1.3em;margin-top:22px}
+  .rating-pill .stars{font-size:1rem}
+  .rating-pill b{font-family:'Fraunces',serif;font-style:italic;color:#fff;font-weight:600}
+  .quote-wrap{margin-top:40px;min-height:230px;position:relative}
+  .slide{position:absolute;inset:0;opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
+  .slide.active{opacity:1;position:relative;pointer-events:auto}
+  .qmark{font-family:'Fraunces',serif;font-weight:600;font-size:3.4rem;color:var(--green);line-height:.6;height:38px}
+  .quote-txt{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;color:#F4F6F2;max-width:24ch}
+  .quote-author{margin-top:24px}
+  .quote-author b{color:#fff;font-size:1.05rem;display:block}
+  .quote-author span{color:rgba(255,255,255,.6);font-size:.92rem}
+  .testi-nav{display:flex;align-items:center;gap:16px;margin-top:40px}
+  .navbtn{width:50px;height:50px;border-radius:999px;border:1px solid var(--dark-line);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s var(--ease)}
+  .navbtn:hover{background:#fff;color:var(--dark)}
+  .dots{display:flex;gap:8px;margin-left:6px}
+  .dot{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.25);border:0;cursor:pointer;transition:.25s var(--ease);padding:0}
+  .dot.active{background:var(--green);width:26px}
+
+  /* Booking / form */
+  .booking-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .benefits{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:16px}
+  .benefits li{display:flex;align-items:flex-start;gap:14px;font-size:1.05rem;color:var(--ink);font-weight:500}
+  .b-ico{flex-shrink:0;width:34px;height:34px;border-radius:999px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center}
+  .b-ico svg{width:17px;height:17px}
+
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px;box-shadow:var(--shadow-md)}
+  .progress{display:flex;gap:8px;margin-bottom:22px}
+  .progress i{height:6px;border-radius:999px;background:var(--line);flex:1;transition:.4s var(--ease)}
+  .progress i.done{background:var(--green)}
+  .step-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+  .form-card h3{font-size:1.55rem;margin:8px 0 6px}
+  .form-card .hint{color:var(--muted);font-size:.98rem;margin-bottom:22px}
+  .fstep{display:none;animation:fade .4s var(--ease)}
+  .fstep.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .opt-list{display:flex;flex-direction:column;gap:12px}
+  .opt{
+    display:flex;align-items:center;gap:14px;width:100%;text-align:left;cursor:pointer;
+    background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;
+    transition:.2s var(--ease);font-family:inherit;font-size:1rem;
+  }
+  .opt:hover{border-color:var(--green-100);background:#fff}
+  .opt.sel{border-color:var(--green);background:var(--green-050);box-shadow:0 0 0 3px rgba(39,149,58,.12)}
+  .opt-ico{width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--green-600);flex-shrink:0}
+  .opt.sel .opt-ico{background:var(--green);color:#fff;border-color:var(--green)}
+  .opt-ico svg{width:20px;height:20px}
+  .opt-txt b{color:var(--ink);font-weight:700;display:block;font-size:1.02rem}
+  .opt-txt span{color:var(--muted);font-size:.86rem}
+  .opt-check{margin-left:auto;width:24px;height:24px;border-radius:999px;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s var(--ease)}
+  .opt.sel .opt-check{background:var(--green);border-color:var(--green)}
+  .opt-check svg{width:13px;height:13px;color:#fff;opacity:0;transition:.2s}
+  .opt.sel .opt-check svg{opacity:1}
+
+  .field-label{font-weight:700;color:var(--ink);font-size:.98rem;margin:22px 0 12px;display:block}
+  .field-label:first-child{margin-top:0}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{
+    background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:.6em 1.1em;
+    cursor:pointer;font-family:inherit;font-size:.95rem;font-weight:600;color:var(--ink);transition:.18s var(--ease);
+  }
+  .chip:hover{border-color:var(--green-100)}
+  .chip.sel{background:var(--green);border-color:var(--green);color:#fff}
+
+  .inp{width:100%;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;font-family:inherit;font-size:1rem;color:var(--ink);transition:.2s var(--ease)}
+  .inp:focus{outline:0;border-color:var(--green);box-shadow:0 0 0 3px rgba(39,149,58,.12);background:#fff}
+  .inp::placeholder{color:#A7AEA4}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  textarea.inp{resize:vertical;min-height:88px}
+
+  .form-nav{display:flex;gap:12px;margin-top:26px;align-items:center}
+  .form-nav .btn{flex:1}
+  .back-btn{background:transparent;border:1.5px solid var(--line);color:var(--ink);flex:0 0 auto;width:52px;padding:0;height:52px}
+  .back-btn:hover{border-color:var(--ink)}
+  .disclaimer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:16px;line-height:1.5}
+  .disclaimer a{color:var(--green-600);text-decoration:underline}
+
+  .success{text-align:center;padding:20px 0}
+  .success .s-ico{width:76px;height:76px;border-radius:999px;background:var(--green-050);color:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+  .success .s-ico svg{width:38px;height:38px}
+  .success h3{font-size:1.7rem;margin-bottom:10px}
+  .success p{color:var(--body);max-width:34ch;margin:0 auto 10px}
+  .summary-box{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:22px auto 0;max-width:340px;text-align:left}
+  .summary-box div{display:flex;justify-content:space-between;gap:14px;padding:5px 0;font-size:.92rem}
+  .summary-box div span:first-child{color:var(--muted)}
+  .summary-box div span:last-child{color:var(--ink);font-weight:600;text-align:right}
+
+  /* FAQ */
+  .faq-head h2{font-size:clamp(2rem,4.4vw,3rem)}
+  .contact-band{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;margin:44px 0 40px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px;box-shadow:var(--shadow-sm)}
+  .contact-info h3{font-size:1.5rem;margin-bottom:8px}
+  .contact-info p{color:var(--body)}
+  .contact-methods{display:flex;flex-direction:column;gap:2px}
+  .cm{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .cm:last-child{border-bottom:0}
+  .cm-ico{width:46px;height:46px;border-radius:13px;background:var(--green-050);color:var(--green-600);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .cm-ico svg{width:22px;height:22px}
+  .cm small{color:var(--muted);font-size:.82rem;display:block}
+  .cm b{color:var(--ink);font-size:1.15rem;font-weight:700}
+
+  .faq-list{max-width:820px;margin:0 auto}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden;transition:.25s var(--ease)}
+  .faq-item.open{border-color:var(--green-100);box-shadow:var(--shadow-sm)}
+  .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;cursor:pointer;background:none;border:0;font-family:inherit;text-align:left;font-size:1.12rem;font-weight:700;color:var(--ink)}
+  .faq-toggle{flex-shrink:0;width:32px;height:32px;border-radius:999px;background:var(--green-050);color:var(--green-600);display:flex;align-items:center;justify-content:center;transition:.3s var(--ease)}
+  .faq-item.open .faq-toggle{background:var(--green);color:#fff;transform:rotate(45deg)}
+  .faq-toggle svg{width:16px;height:16px}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+  .faq-a p{padding:0 26px 24px;color:var(--body);max-width:70ch}
+
+  /* Footer */
+  footer{background:var(--dark);color:rgba(255,255,255,.72);padding:72px 0 32px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--dark-line)}
+  .foot-brand img{height:40px;margin-bottom:18px;filter:brightness(0) saturate(100%) invert(64%) sepia(38%) saturate(560%) hue-rotate(75deg) brightness(92%) contrast(88%)}
+  .foot-brand p{max-width:34ch;font-size:.98rem;line-height:1.6}
+  footer h4{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  footer ul a{color:rgba(255,255,255,.72);font-size:.98rem;transition:.2s}
+  footer ul a:hover{color:#fff}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:28px;flex-wrap:wrap;font-size:.88rem;color:rgba(255,255,255,.5)}
+  .foot-bottom .socials{display:flex;gap:10px}
+  .foot-bottom .socials a{width:38px;height:38px;border-radius:999px;border:1px solid var(--dark-line);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:.2s}
+  .foot-bottom .socials a:hover{background:var(--green);border-color:var(--green);color:#fff}
+  .foot-bottom .socials svg{width:18px;height:18px}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media(max-width:1000px){
+    .hero-grid,.approach-grid,.about-grid,.booking-grid{grid-template-columns:1fr;gap:44px}
+    .hero-copy{display:contents}
+    .hero-copy .lead{order:2}
+    .hero-visual{order:3}
+    .hero-cta{order:4}
+    .rating-row{order:5}
+    .mini-stats{order:6}
+    .approach-visual{max-width:440px}
+    .contact-band{grid-template-columns:1fr;gap:24px}
+    .nav-links,.nav-phone{display:none}
+    .burger{display:flex}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .foot-brand{grid-column:1/-1}
+  }
+  @media(max-width:720px){
+    body{font-size:16px}
+    .pad{padding:64px 0}
+    .wrap{padding:0 18px}
+    .svc-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:24px 0}
+    .stat{padding:14px 20px}
+    .stat:nth-child(3){border-left:0;padding-left:20px}
+    .stat:nth-child(odd){border-left:0;padding-left:0}
+    .grid-2{grid-template-columns:1fr}
+    .hero-inset{width:52%}
+    .svc-card,.form-card{padding:26px}
+    .about-lead{font-size:1.3rem}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="De Leer Vrienden home">
+        <img src="images/logo-transparant.png" alt="De Leer Vrienden" width="70" height="34" decoding="async">
+      </a>
+      <nav class="nav-links" aria-label="Hoofdmenu">
+        <a href="#ervaringen">Ervaringen</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#aanpak">Aanpak</a>
+        <a href="#over">Over ons</a>
+        <a href="#faq">Veelgestelde vragen</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:0684513803" class="nav-phone">06 8451 3803</a>
+        <a href="#proefles" class="btn btn-primary" style="padding:.8em 1.3em">Gratis proefles</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu openen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-inner">
+      <a href="#ervaringen">Ervaringen</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#aanpak">Aanpak</a>
+      <a href="#over">Over ons</a>
+      <a href="#faq">Veelgestelde vragen</a>
+      <a href="#proefles" class="btn btn-primary btn-block">Plan een gratis proefles</a>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Studiebegeleiding · Cito · Examentraining</span>
+      <h1 style="margin-top:18px">Groeien met<br><span class="accent">zelfvertrouwen.</span></h1>
+      <p class="lead">Persoonlijke begeleiding voor basis- &amp; voortgezet onderwijs in Ridderkerk. Wij maken leren overzichtelijk, haalbaar en <b style="color:var(--ink)">écht leuk</b>.</p>
+      <div class="hero-cta">
+        <a href="#proefles" class="btn btn-primary">Plan een gratis proefles <span class="arw">→</span></a>
+        <a href="#diensten" class="btn btn-ghost">Bekijk onze diensten</a>
+      </div>
+      <div class="rating-row">
+        <span class="stars">★★★★★</span>
+        <b>9,4</b><span>· gemiddelde waardering van ouders &amp; leerlingen</span>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat"><b>150+</b><span>leerlingen begeleid</span></div>
+        <div class="mini-stat"><b>1-op-1</b><span>vaste begeleider</span></div>
+        <div class="mini-stat"><b>PO &amp; VO</b><span>alle niveaus</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="photo hero-main">
+        <img src="images/2_KLANTEN.jpg" alt="Twee leerlingen bestuderen samen aantekeningen op de bank, met een laptop en boek" width="960" height="1200" loading="eager" decoding="async">
+        <div class="hero-pill">✦ Gratis proefles</div>
+      </div>
+      <div class="photo hero-inset">
+        <img src="images/_STI8936.jpg" alt="Close-up van twee leerlingen die samen iets opzoeken in de atlas" width="600" height="600" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Leren op alle niveaus</span><span>Persoonlijke begeleiding</span><span>Vaste begeleider</span><span>Plezier in leren</span><span>In het hart van Ridderkerk</span>
+    <span>Leren op alle niveaus</span><span>Persoonlijke begeleiding</span><span>Vaste begeleider</span><span>Plezier in leren</span><span>In het hart van Ridderkerk</span>
+  </div>
+</div>
+
+<!-- ============ STATS ============ -->
+<section class="stats pad-sm">
+  <div class="wrap">
+    <div class="stats-grid reveal">
+      <div class="stat"><b>150+</b><span>leerlingen begeleid sinds onze start</span></div>
+      <div class="stat"><b>9,4</b><span>gemiddelde waardering van ouders</span></div>
+      <div class="stat"><b>1-op-1</b><span>altijd persoonlijke aandacht</span></div>
+      <div class="stat"><b>PO &amp; VO</b><span>basis- én voortgezet onderwijs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING / FORM ============ -->
+<section class="pad wrap" id="proefles">
+  <div class="booking-grid">
+    <div class="reveal">
+      <span class="eyebrow">Gratis &amp; vrijblijvend</span>
+      <h2 style="font-size:clamp(2rem,4.4vw,3.1rem);margin-top:16px">Plan jouw<br>gratis proefles.</h2>
+      <p style="margin-top:18px;font-size:1.1rem">In een paar stappen plant u een kennismaking op maat. We bellen u binnen één werkdag om een moment af te stemmen.</p>
+      <ul class="benefits">
+        <li><span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Gratis intake &amp; proefles, zonder verplichtingen</li>
+        <li><span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Persoonlijk advies afgestemd op uw kind</li>
+        <li><span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>Reactie binnen één werkdag</li>
+        <li><span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>In ons centrum in Ridderkerk</li>
+      </ul>
+    </div>
+
+    <!-- MULTI-STEP FORM -->
+    <div class="form-card reveal" id="formCard">
+      <div class="progress" id="progress">
+        <i class="done"></i><i></i><i></i>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="fstep active" data-step="1">
+        <span class="step-label">Stap 1 van 3</span>
+        <h3>Voor welk onderwijs zoekt u hulp?</h3>
+        <p class="hint">Kies wat het beste past. Kan later altijd nog bijgesteld worden.</p>
+        <div class="opt-list" data-single="onderwijs">
+          <button class="opt" data-value="basis" data-label="Basisonderwijs">
+            <span class="opt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="opt-txt"><b>Basisonderwijs</b><span>Groep 3 t/m 8</span></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </button>
+          <button class="opt" data-value="cito" data-label="Cito / doorstroom">
+            <span class="opt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <span class="opt-txt"><b>Cito / doorstroom</b><span>Groep 7 &amp; 8</span></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </button>
+          <button class="opt" data-value="vo" data-label="Voortgezet onderwijs">
+            <span class="opt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <span class="opt-txt"><b>Voortgezet onderwijs</b><span>VMBO · HAVO · VWO</span></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </button>
+          <button class="opt" data-value="examen" data-label="Examentraining">
+            <span class="opt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/></svg></span>
+            <span class="opt-txt"><b>Examentraining</b><span>Eindexamenjaar</span></span>
+            <span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </button>
+        </div>
+        <div class="form-nav">
+          <button class="btn btn-primary btn-block" data-next>Volgende <span class="arw">→</span></button>
+        </div>
+        <p class="disclaimer">Door te versturen gaat u akkoord met onze <a href="#">privacyverklaring</a>. We bellen alleen voor het inplannen.</p>
+      </div>
+
+      <!-- STEP 2 (dynamic) -->
+      <div class="fstep" data-step="2">
+        <span class="step-label">Stap 2 van 3</span>
+        <h3 id="step2Title">Vertel ons iets meer.</h3>
+        <p class="hint" id="step2Hint">Zo bereiden we de kennismaking goed voor.</p>
+        <div id="step2Body"></div>
+        <div class="form-nav">
+          <button class="back-btn" data-back aria-label="Terug"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="btn btn-primary" style="flex:1" data-next>Volgende <span class="arw">→</span></button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="fstep" data-step="3">
+        <span class="step-label">Stap 3 van 3</span>
+        <h3>Waar mogen we u bereiken?</h3>
+        <p class="hint">We bellen u binnen één werkdag om samen een moment te plannen.</p>
+        <label class="field-label">Naam ouder/verzorger</label>
+        <input class="inp" id="fParent" type="text" placeholder="Bijv. Sanne Bakker" autocomplete="name">
+        <div class="grid-2" style="margin-top:14px">
+          <div>
+            <label class="field-label">Naam leerling</label>
+            <input class="inp" id="fChild" type="text" placeholder="Voornaam" autocomplete="off">
+          </div>
+          <div>
+            <label class="field-label">Telefoon</label>
+            <input class="inp" id="fPhone" type="tel" placeholder="06 …" autocomplete="tel">
+          </div>
+        </div>
+        <label class="field-label">E-mailadres</label>
+        <input class="inp" id="fEmail" type="email" placeholder="naam@email.nl" autocomplete="email">
+        <label class="field-label">Bericht <span style="color:var(--muted);font-weight:500">(optioneel)</span></label>
+        <textarea class="inp" id="fMsg" placeholder="Vertel kort waar uw kind hulp bij kan gebruiken…"></textarea>
+        <div class="form-nav">
+          <button class="back-btn" data-back aria-label="Terug"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="btn btn-primary" style="flex:1" id="submitBtn">Aanvraag versturen <span class="arw">→</span></button>
+        </div>
+        <p class="disclaimer">Door te versturen gaat u akkoord met onze <a href="#">privacyverklaring</a>. We bellen alleen voor het inplannen.</p>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="fstep" data-step="done">
+        <div class="success">
+          <div class="s-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Aanvraag ontvangen!</h3>
+          <p>Bedankt, <b id="doneName">wij</b> nemen binnen één werkdag telefonisch contact op om de gratis proefles in te plannen.</p>
+          <div class="summary-box" id="summaryBox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testi pad" id="ervaringen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow on-dark">Ervaringen</span>
+      <h2 style="font-size:clamp(2rem,4.6vw,3.2rem);margin-top:16px">Wat ouders en<br>leerlingen vertellen.</h2>
+      <div class="rating-pill"><span class="stars">★★★★★</span><b>9,4 / 10</b></div>
+    </div>
+
+    <div class="quote-wrap reveal" id="quoteWrap">
+      <div class="slide active">
+        <div class="qmark">&ldquo;</div>
+        <p class="quote-txt">Onze dochter ging met buikpijn naar de Cito-toets. Na de training bij De Leer Vrienden ging ze met vertrouwen, en met een glimlach. Het verschil is enorm.</p>
+        <div class="quote-author"><b>Familie Bakker</b><span>Ouder · groep 8</span></div>
+      </div>
+      <div class="slide">
+        <div class="qmark">&ldquo;</div>
+        <p class="quote-txt">Mijn zoon had een hekel aan wiskunde. De vaste begeleider vond precies de klik. Zijn cijfers gingen omhoog, maar vooral zijn plezier.</p>
+        <div class="quote-author"><b>Familie El Amrani</b><span>Ouder · havo 4</span></div>
+      </div>
+      <div class="slide">
+        <div class="qmark">&ldquo;</div>
+        <p class="quote-txt">Ik snapte eindelijk hoe ik moest plannen. Nu haal ik mijn deadlines zonder stress en durf ik meer in de klas.</p>
+        <div class="quote-author"><b>Enzo</b><span>Leerling · mavo 3</span></div>
+      </div>
+      <div class="slide">
+        <div class="qmark">&ldquo;</div>
+        <p class="quote-txt">Fijne, persoonlijke begeleiding en heldere updates. Als ouder voelde ik me echt betrokken bij de vooruitgang.</p>
+        <div class="quote-author"><b>Familie De Groot</b><span>Ouder · groep 6</span></div>
+      </div>
+    </div>
+
+    <div class="testi-nav reveal">
+      <button class="navbtn" id="prevBtn" aria-label="Vorige ervaring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="navbtn" id="nextBtn" aria-label="Volgende ervaring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="pad wrap" id="diensten">
+  <div class="sec-top">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Onze diensten</span>
+      <h2>Voor elke fase<br>de juiste begeleiding.</h2>
+    </div>
+    <a href="#proefles" class="btn btn-outline reveal">Plan een proefles <span class="arw">→</span></a>
+  </div>
+
+  <div class="svc-grid">
+    <!-- 01 -->
+    <article class="svc-card reveal">
+      <div class="svc-top">
+        <span class="svc-num">01</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      </div>
+      <h3>Studiebegeleiding</h3>
+      <div class="svc-sub">groep 3 t/m brugklas</div>
+      <p>Wekelijkse persoonlijke begeleiding waarin uw kind leert plannen, structureren en zelfstandig werken, met aandacht voor wat écht werkt.</p>
+      <ul class="svc-list">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Eigen vaste begeleider</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Plannen, structuur &amp; overzicht</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rekenen, taal en begrijpend lezen</li>
+      </ul>
+      <a href="#proefles" class="more">Meer informatie <span>→</span></a>
+    </article>
+
+    <!-- 02 -->
+    <article class="svc-card reveal">
+      <div class="svc-top">
+        <span class="svc-num">02</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      </div>
+      <h3>Cito-training</h3>
+      <div class="svc-sub">groep 7 &amp; 8</div>
+      <p>Gerichte voorbereiding op de doorstroomtoets. We oefenen stof én toetsvaardigheden, zodat uw kind met rust de toets in gaat.</p>
+      <ul class="svc-list">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Echte toetsvormen oefenen</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Toetsangst ombuigen naar rust</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Heldere voortgangsrapportage</li>
+      </ul>
+      <a href="#proefles" class="more">Meer informatie <span>→</span></a>
+    </article>
+
+    <!-- 03 -->
+    <article class="svc-card reveal">
+      <div class="svc-top">
+        <span class="svc-num">03</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      </div>
+      <h3>Examentraining</h3>
+      <div class="svc-sub">vmbo, havo en vwo</div>
+      <p>Intensieve vakinhoudelijke training in de eindspurt naar het examen. Strategie, routine en rust, door ervaren docenten.</p>
+      <ul class="svc-list">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Alle kernvakken</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Examenstrategie &amp; planning</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Intensief in examenperiode</li>
+      </ul>
+      <a href="#proefles" class="more">Meer informatie <span>→</span></a>
+    </article>
+
+    <!-- 04 -->
+    <article class="svc-card reveal">
+      <div class="svc-top">
+        <span class="svc-num">04</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-4.9-3.6-4.9 3.6 1.9-5.8L4 8.8h6.1z"/></svg></div>
+      </div>
+      <h3>Maatwerk &amp; faalangst</h3>
+      <div class="svc-sub">elke leeftijd</div>
+      <p>Soms is er net iets meer nodig. Begeleiding bij faalangst, concentratie en motivatie, altijd persoonlijk en in overleg met ouders.</p>
+      <ul class="svc-list">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Werken aan zelfvertrouwen</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Concentratie &amp; motivatie</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Persoonlijk plan op maat</li>
+      </ul>
+      <a href="#proefles" class="more">Meer informatie <span>→</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="pad wrap" id="aanpak">
+  <div class="approach-grid">
+    <div class="approach-visual reveal">
+      <div class="photo">
+        <img src="images/AMIN_X_ENZO.jpg" alt="Begeleider legt glimlachend iets uit aan een leerling tijdens 1-op-1 begeleiding" width="900" height="1200" loading="lazy" decoding="async">
+      </div>
+      <div class="badge-100"><b>100%</b><span>aandacht voor uw kind</span></div>
+    </div>
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Onze aanpak</span>
+        <h2>Vier stappen naar<br>plezier in leren.</h2>
+        <p>Geen standaard bijles, maar een persoonlijke route die past bij uw kind.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div><h3>Kennismaking</h3><p>We starten met een gratis proefles en intakegesprek. We leren uw kind kennen en luisteren naar wat er speelt.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div><h3>Persoonlijk plan</h3><p>Op basis van de leerstijl en doelen maken we een plan op maat: helder en haalbaar voor kind én ouders.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div><h3>Wekelijks groeien</h3><p>Met een vaste begeleider werkt uw kind stap voor stap. We vieren successen en houden u op de hoogte.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div><h3>Zelfstandig &amp; sterk</h3><p>Het doel: een kind dat met plezier, structuur en zelfvertrouwen zélf verder kan op school.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about pad" id="over">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Over ons</span>
+      <h2 style="font-size:clamp(2rem,4.4vw,3.1rem);margin-top:16px">Groeien met zelfvertrouwen.</h2>
+      <p class="about-lead">Bij De Leer Vrienden leert iedere leerling op zijn of haar eigen manier het beste uit zichzelf te halen.</p>
+      <p>Leren wordt overzichtelijk en gestructureerd, waardoor schoolwerk niet langer een opgave is maar een ervaring van groei en succes. Met begeleiding die aansluit bij het tempo en de stijl van het kind, ontdekken leerlingen hoe ze zelfstandig en met plezier vooruitgang kunnen boeken.</p>
+      <p>Daarom werken wij persoonlijk, stap voor stap en met aandacht voor wat echt werkt. Zo groeit niet alleen kennis en inzicht, maar ook zelfvertrouwen, motivatie en plezier in het leren — en zien ouders hun kind sterker en gelukkiger worden.</p>
+      <div class="team-card">
+        <div class="team-av"><img src="images/Mo.jpg" alt="Portret van Mo, studiebegeleider bij De Leer Vrienden" width="60" height="60" loading="lazy" decoding="async"></div>
+        <div><b>Het team van De Leer Vrienden</b><span>Studiebegeleiders &amp; docenten · Ridderkerk</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow" style="margin-bottom:24px;display:inline-block">Waar wij voor staan</span>
+      <div class="values">
+        <div class="value"><div class="value-num">01</div><div><h3>Persoonlijk</h3><p>Een vaste begeleider die uw kind écht kent en aansluit bij hoe het leert.</p></div></div>
+        <div class="value"><div class="value-num">02</div><div><h3>Stap voor stap</h3><p>Haalbare doelen, zichtbare vooruitgang en gevierde successen.</p></div></div>
+        <div class="value"><div class="value-num">03</div><div><h3>Met plezier</h3><p>Leren mag leuk en betekenisvol zijn. Dan blijft het ook hangen.</p></div></div>
+        <div class="value"><div class="value-num">04</div><div><h3>Samen met ouders</h3><p>Korte lijntjes en heldere updates: u blijft betrokken en op de hoogte.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<!--
+  Namen, rollen en foto's hieronder zijn placeholders en moeten door de klant bevestigd worden.
+  Opmerking: images/PF_1_.jpg, PF_4.jpg en PF_5.jpg lijken visueel dezelfde persoon te zijn als
+  Latta.jpg, alleen in andere outfits (zie FOTO-PLAATSING.md). Om te voorkomen dat de teamsectie
+  hetzelfde gezicht onder twee namen toont, zijn ze hier niet als apart teamlid gebruikt. Zodra
+  bevestigd is wie wie is, kan hier eenvoudig een derde/vierde .tm-card bijgezet worden.
+-->
+<section class="pad wrap" id="team">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Ons team</span>
+    <h2>De begeleiders achter<br>De Leer Vrienden.</h2>
+    <p>Maak kennis met de vaste begeleiders die uw kind stap voor stap verder helpen.</p>
+  </div>
+  <div class="team-grid reveal">
+    <!-- TODO: naam/rol bevestigen -->
+    <article class="tm-card">
+      <div class="tm-photo">
+        <img src="images/Mo.jpg" alt="Portret van Mo, studiebegeleider bij De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async">
+      </div>
+      <b class="tm-name">Mo</b>
+      <span class="tm-role">Studiebegeleider</span>
+    </article>
+    <!-- TODO: naam/rol bevestigen -->
+    <article class="tm-card">
+      <div class="tm-photo">
+        <img src="images/Latta.jpg" alt="Portret van Latta, studiebegeleider bij De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async">
+      </div>
+      <b class="tm-name">Latta</b>
+      <span class="tm-role">Studiebegeleider</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FAQ / CONTACT ============ -->
+<section class="about pad" id="faq">
+  <div class="wrap">
+    <div class="faq-head sec-head center reveal">
+      <h2>Goed om te <span class="hl">weten</span>.</h2>
+    </div>
+
+    <div class="contact-band reveal">
+      <div class="contact-info">
+        <h3>Nog een vraag?</h3>
+        <p>We helpen u graag persoonlijk verder. Bel of mail ons gerust, we denken met u mee.</p>
+        <a href="#proefles" class="btn btn-primary" style="margin-top:20px">Plan een gratis proefles <span class="arw">→</span></a>
+      </div>
+      <div class="contact-methods">
+        <a href="tel:0684513803" class="cm">
+          <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><small>Telefoon · ma–vr 9–17u</small><b>06 8451 3803</b></div>
+        </a>
+        <a href="mailto:info@deleervrienden.nl" class="cm">
+          <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <div><small>E-mail · reactie binnen 1 werkdag</small><b>info@deleervrienden.nl</b></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">Voor welke leeftijden bieden jullie begeleiding?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Wij begeleiden leerlingen van groep 3 op de basisschool tot en met het eindexamenjaar in het voortgezet onderwijs. Of het nu gaat om rekenen in groep 5 of examentraining wiskunde in vwo 6 — er is altijd passende begeleiding.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Hoe werkt de gratis proefles?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>U plant online een aanvraag via het formulier. We bellen u binnen één werkdag voor een korte kennismaking en plannen een gratis proefles in ons centrum in Ridderkerk. Tijdens die les leren we uw kind kennen en bespreken we wat er speelt — helemaal vrijblijvend.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Waar vinden de lessen plaats?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>De begeleiding vindt plaats op onze locatie in het centrum van Ridderkerk. In overleg is een deel van de begeleiding ook online mogelijk, bijvoorbeeld tijdens de examenperiode.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Krijgt mijn kind een vaste begeleider?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Ja. Uw kind werkt met een eigen vaste begeleider die het kind écht leert kennen. Dat zorgt voor vertrouwen, continuïteit en begeleiding die aansluit bij hoe uw kind leert.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Blijf ik als ouder op de hoogte van de voortgang?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Zeker. We houden korte lijntjes en geven heldere updates over de voortgang en de doelen. Zo blijft u betrokken en weet u precies waar uw kind aan werkt.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="images/logo-transparant.png" alt="De Leer Vrienden" width="82" height="40" loading="lazy" decoding="async">
+        <p>Persoonlijke studiebegeleiding, Cito-training en examentraining in Ridderkerk. Samen werken aan groei, structuur en zelfvertrouwen.</p>
+      </div>
+      <div>
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="#diensten">Studiebegeleiding</a></li>
+          <li><a href="#diensten">Cito-training</a></li>
+          <li><a href="#diensten">Examentraining</a></li>
+          <li><a href="#diensten">Maatwerk &amp; faalangst</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>De Leer Vrienden</h4>
+        <ul>
+          <li><a href="#over">Over ons</a></li>
+          <li><a href="#aanpak">Onze aanpak</a></li>
+          <li><a href="#ervaringen">Ervaringen</a></li>
+          <li><a href="#faq">Veelgestelde vragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0684513803">06 8451 3803</a></li>
+          <li><a href="mailto:info@deleervrienden.nl">info@deleervrienden.nl</a></li>
+          <li><a href="#proefles">Gratis proefles</a></li>
+          <li>Ridderkerk, Zuid-Holland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> De Leer Vrienden · KVK 98770454 · Alle rechten voorbehouden</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* year */
+  $('#year').textContent=new Date().getFullYear();
+
+  /* Mobile menu */
+  var burger=$('#burger'), menu=$('#mobileMenu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+  });
+  $$('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);});});
+
+  /* Header shadow on scroll */
+  var header=$('header');
+  window.addEventListener('scroll',function(){
+    header.style.boxShadow = window.scrollY>10 ? '0 6px 24px rgba(23,40,28,.06)' : 'none';
+  });
+
+  /* Reveal on scroll */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  $$('.reveal').forEach(function(el){io.observe(el);});
+
+  /* ===== Testimonials carousel ===== */
+  var slides=$$('#quoteWrap .slide'), idx=0, dotsWrap=$('#dots'), timer;
+  slides.forEach(function(_,i){
+    var b=document.createElement('button');
+    b.className='dot'+(i===0?' active':''); b.setAttribute('aria-label','Ervaring '+(i+1));
+    b.addEventListener('click',function(){go(i);reset();});
+    dotsWrap.appendChild(b);
+  });
+  var dots=$$('.dot',dotsWrap);
+  function go(n){
+    idx=(n+slides.length)%slides.length;
+    slides.forEach(function(s,i){s.classList.toggle('active',i===idx);});
+    dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+  }
+  function reset(){clearInterval(timer);timer=setInterval(function(){go(idx+1);},6500);}
+  $('#nextBtn').addEventListener('click',function(){go(idx+1);reset();});
+  $('#prevBtn').addEventListener('click',function(){go(idx-1);reset();});
+  reset();
+
+  /* ===== FAQ accordion ===== */
+  $$('.faq-item').forEach(function(item){
+    var q=$('.faq-q',item), a=$('.faq-a',item);
+    if(item.classList.contains('open')) a.style.maxHeight=a.scrollHeight+'px';
+    q.addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      $$('.faq-item').forEach(function(o){o.classList.remove('open');$('.faq-a',o).style.maxHeight=null;});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  /* ===== Multi-step branching form ===== */
+  var state={onderwijs:null, onderwijsLabel:'', details:{}};
+  var steps=$$('.fstep'), progress=$$('#progress i');
+  var current=1;
+
+  // single-select option lists (step 1)
+  function bindSingle(container){
+    var group=container.getAttribute('data-single');
+    $$('.opt',container).forEach(function(opt){
+      opt.addEventListener('click',function(){
+        $$('.opt',container).forEach(function(o){o.classList.remove('sel');});
+        opt.classList.add('sel');
+        if(group==='onderwijs'){
+          state.onderwijs=opt.getAttribute('data-value');
+          state.onderwijsLabel=opt.getAttribute('data-label');
+        }
+      });
+    });
+  }
+  bindSingle($('.opt-list[data-single="onderwijs"]'));
+
+  // STEP 2 dynamic content per branch
+  var vakken=['Wiskunde','Nederlands','Engels','Natuurkunde','Scheikunde','Biologie','Economie','Frans','Duits','Geschiedenis','Anders'];
+  function chipGroup(name,label,options,multi){
+    var html='<label class="field-label">'+label+'</label><div class="chips" data-'+(multi?'multi':'single')+'="'+name+'">';
+    options.forEach(function(o){ html+='<button type="button" class="chip" data-value="'+o+'">'+o+'</button>'; });
+    return html+'</div>';
+  }
+  function buildStep2(){
+    var body=$('#step2Body'), title=$('#step2Title'), hint=$('#step2Hint'), html='';
+    state.details={}; // reset when (re)building
+    switch(state.onderwijs){
+      case 'basis':
+        title.textContent='Vertel ons over uw kind.';
+        hint.textContent='Zo sluit de proefles goed aan op groep en niveau.';
+        html+=chipGroup('groep','In welke groep zit uw kind?',['Groep 3','Groep 4','Groep 5','Groep 6','Groep 7','Groep 8'],false);
+        html+=chipGroup('focus','Waar wilt u vooral hulp bij?',['Rekenen','Taal &amp; spelling','Begrijpend lezen','Brede ondersteuning'],true);
+        break;
+      case 'cito':
+        title.textContent='Cito / doorstroomtoets.';
+        hint.textContent='We stemmen de training af op de toets en het niveau.';
+        html+=chipGroup('groep','In welke groep zit uw kind?',['Groep 7','Groep 8'],false);
+        html+=chipGroup('focus','Waar ligt de focus?',['Rekenen','Taal','Begrijpend lezen','Compleet Cito-traject'],true);
+        break;
+      case 'vo':
+        title.textContent='Voortgezet onderwijs.';
+        hint.textContent='Kies niveau, leerjaar en de vakken waar het om gaat.';
+        html+=chipGroup('niveau','Welk niveau?',['VMBO','HAVO','VWO','Gymnasium'],false);
+        html+=chipGroup('leerjaar','Welk leerjaar?',['Leerjaar 1','Leerjaar 2','Leerjaar 3','Leerjaar 4','Leerjaar 5','Leerjaar 6'],false);
+        html+=chipGroup('vak','Welk vak of welke vakken?',vakken,true);
+        break;
+      case 'examen':
+        title.textContent='Examentraining.';
+        hint.textContent='Vertel ons het niveau en de examenvakken.';
+        html+=chipGroup('niveau','Welk niveau?',['VMBO','HAVO','VWO'],false);
+        html+=chipGroup('vak','Welke examenvakken?',vakken,true);
+        break;
+      default:
+        title.textContent='Kies eerst een onderwijstype';
+        hint.textContent='Ga terug naar stap 1 om een keuze te maken.';
+    }
+    body.innerHTML=html;
+    // bind chip groups
+    $$('.chips',body).forEach(function(group){
+      var multi=group.hasAttribute('data-multi');
+      var key=group.getAttribute(multi?'data-multi':'data-single');
+      $$('.chip',group).forEach(function(chip){
+        chip.addEventListener('click',function(){
+          var val=chip.getAttribute('data-value').replace('&amp;','&');
+          if(multi){
+            chip.classList.toggle('sel');
+            state.details[key]=$$('.chip.sel',group).map(function(c){return c.getAttribute('data-value').replace('&amp;','&');});
+          }else{
+            $$('.chip',group).forEach(function(c){c.classList.remove('sel');});
+            chip.classList.add('sel');
+            state.details[key]=val;
+          }
+        });
+      });
+    });
+  }
+
+  function showStep(n){
+    steps.forEach(function(s){s.classList.remove('active');});
+    var target = (n==='done') ? $('.fstep[data-step="done"]') : $('.fstep[data-step="'+n+'"]');
+    target.classList.add('active');
+    // progress
+    progress.forEach(function(p,i){ p.classList.toggle('done', (n==='done') ? true : (i < n)); });
+    // scroll form into view on step change (not on first load)
+    var card=$('#formCard');
+    var top=card.getBoundingClientRect().top+window.scrollY-110;
+    if(n!==1) window.scrollTo({top:top,behavior:'smooth'});
+    current=n;
+  }
+
+  // validation helpers
+  function validStep1(){
+    if(!state.onderwijs){ shake($('.opt-list')); return false;}
+    return true;
+  }
+  function validStep2(){
+    // require at least the first (niveau/groep) selection where relevant
+    var need = (state.onderwijs==='vo')?['niveau','leerjaar','vak']
+             : (state.onderwijs==='examen')?['niveau','vak']
+             : ['groep','focus'];
+    var ok=true;
+    need.forEach(function(k){
+      var v=state.details[k];
+      if(!v || (Array.isArray(v)&&v.length===0)) ok=false;
+    });
+    if(!ok) shake($('#step2Body'));
+    return ok;
+  }
+  function shake(el){ if(!el)return; el.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:280}); }
+
+  // next / back buttons
+  $$('[data-next]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(current===1){ if(!validStep1())return; buildStep2(); showStep(2); }
+      else if(current===2){ if(!validStep2())return; showStep(3); }
+    });
+  });
+  $$('[data-back]').forEach(function(btn){
+    btn.addEventListener('click',function(){ showStep(current-1); });
+  });
+
+  // submit
+  var submitBtn=$('#submitBtn'), submitBtnLabel=submitBtn.innerHTML;
+  submitBtn.addEventListener('click',function(){
+    var parent=$('#fParent').value.trim();
+    var phone=$('#fPhone').value.trim();
+    var email=$('#fEmail').value.trim();
+    var child=$('#fChild').value.trim();
+    var msg=$('#fMsg').value.trim();
+    if(!parent){ $('#fParent').focus(); shake($('#fParent')); return; }
+    if(!phone && !email){ $('#fPhone').focus(); shake($('#fPhone')); return; }
+
+    // build summary
+    var box=$('#summaryBox'); box.innerHTML='';
+    function row(k,v){ if(!v)return; var d=document.createElement('div'); d.innerHTML='<span>'+k+'</span><span>'+v+'</span>'; box.appendChild(d); }
+    row('Onderwijs', state.onderwijsLabel);
+    if(state.details.groep) row('Groep', state.details.groep);
+    if(state.details.niveau) row('Niveau', state.details.niveau);
+    if(state.details.leerjaar) row('Leerjaar', state.details.leerjaar);
+    if(state.details.focus) row('Focus', [].concat(state.details.focus).join(', '));
+    if(state.details.vak) row('Vak(ken)', [].concat(state.details.vak).join(', '));
+    if(child) row('Leerling', child);
+
+    submitBtn.disabled=true; submitBtn.textContent='Versturen…';
+
+    fetch('https://formspree.io/f/mwlkegoa',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'Nieuwe proefles-aanvraag van '+parent,
+        'Naam ouder/verzorger':parent,
+        'Naam leerling':child,
+        'Telefoon':phone,
+        email:email,
+        'Bericht':msg,
+        'Onderwijs':state.onderwijsLabel,
+        'Groep':state.details.groep||'',
+        'Niveau':state.details.niveau||'',
+        'Leerjaar':state.details.leerjaar||'',
+        'Focus':[].concat(state.details.focus||[]).join(', '),
+        'Vak(ken)':[].concat(state.details.vak||[]).join(', ')
+      })
+    }).then(function(res){
+      if(!res.ok) throw new Error('submit failed');
+      $('#doneName').textContent='wij';
+      showStep('done');
+    }).catch(function(){
+      alert('Er ging iets mis bij het versturen. Probeer het opnieuw of bel ons op 06 8451 3803.');
+    }).finally(function(){
+      submitBtn.disabled=false; submitBtn.innerHTML=submitBtnLabel;
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
