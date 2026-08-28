@@ -42,7 +42,6 @@
     font-size:17px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
   }
   h1,h2,h3,h4{color:var(--ink);line-height:1.08;letter-spacing:-.02em;font-weight:800}
   a{color:inherit;text-decoration:none}
@@ -94,6 +93,7 @@
   .brand img{height:34px;width:auto}
   @media(min-width:1001px){
     .nav{padding:20px 24px}
+    .brand{position:fixed;top:14px;left:24px;z-index:80}
     .brand img{height:85px}
   }
   .nav-links{display:flex;align-items:center;gap:4px}
@@ -253,13 +253,14 @@
   .value p{color:var(--body);font-size:1rem}
 
   /* Team */
-  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,280px));justify-content:center;gap:28px;margin-top:44px}
-  .tm-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center;transition:.3s var(--ease)}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,420px));justify-content:center;gap:28px;margin-top:44px}
+  .tm-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;transition:.3s var(--ease)}
   .tm-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--green-100)}
   .tm-photo{aspect-ratio:1/1;border-radius:16px;overflow:hidden;margin-bottom:18px;background:linear-gradient(145deg,#E7EEDD 0%,#CFE3CE 55%,#Bcdcbd 100%)}
   .tm-photo img{width:100%;height:100%;object-fit:cover;display:block}
   .tm-name{display:block;font-size:1.15rem;font-weight:800;color:var(--ink)}
   .tm-role{display:block;font-size:.92rem;color:var(--green-600);font-weight:600;margin-top:2px}
+  .tm-bio{text-align:left;color:var(--body);font-size:.96rem;line-height:1.65;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
 
   /* Testimonials (dark) */
   .testi{background:var(--green);color:#fff}
@@ -472,8 +473,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
   </div>
 </div>
 
@@ -483,68 +484,20 @@
 <section class="pad wrap">
   <div class="sec-head center reveal">
     <span class="eyebrow">Over ons</span>
-    <h1 style="font-size:clamp(2.4rem,5vw,3.6rem);margin-top:16px;color:var(--ink);font-family:inherit;letter-spacing:-.02em;font-weight:800;line-height:1.08">Over ons.</h1>
-    <p>Maak kennis met De Leer Vrienden: waarom we begonnen zijn, waar we in geloven en wie er achter de begeleiding staan.</p>
+    <p style="margin-top:16px">Maak kennis met De Leer Vrienden: waarom we begonnen zijn, waar we in geloven en wie er achter de begeleiding staan.</p>
   </div>
-</section>
-
-<!-- ============ ONS VERHAAL ============ -->
-<section class="about pad" id="verhaal">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <span class="eyebrow">Ons verhaal</span>
-      <h2 style="font-size:clamp(2rem,4.4vw,3.1rem);margin-top:16px">Ontstaan uit een simpele overtuiging.</h2>
-      <p class="about-lead">Elk kind kan leren met plezier en zelfvertrouwen — als de begeleiding maar aansluit bij wie het is.</p>
-      <p>De Leer Vrienden is ontstaan vanuit de ervaring dat veel leerlingen niet vastlopen omdat ze het niet kunnen, maar omdat de uitleg, het tempo of de aanpak niet aansluit bij hun manier van leren. We zagen kinderen die thuis aan de keukentafel steeds gefrustreerder raakten, en ouders die niet meer wisten hoe ze konden helpen. Daaruit ontstond het idee voor begeleiding die wél aansluit: persoonlijk, geduldig en gericht op wat een kind daadwerkelijk nodig heeft.</p>
-      <p>Onze visie is dat leren begint bij zelfvertrouwen. Een leerling die durft te proberen, fouten mag maken en successen mag vieren, ontwikkelt zich sneller dan een leerling die vooral bezig is met wat er nog niet lukt. Daarom bouwen we bij elk traject eerst aan vertrouwen, en pas daarna verder aan kennis en vaardigheden — want een kind dat in zichzelf gelooft, blijft groeien, ook lang nadat de begeleiding is afgerond.</p>
-      <div class="team-card">
-        <div class="team-av"><img src="images/Mo.jpg" alt="Portret van Mo, studiebegeleider bij De Leer Vrienden" width="60" height="60" loading="lazy" decoding="async"></div>
-        <div><b>Het team van De Leer Vrienden</b><span>Studiebegeleiders &amp; docenten · Ridderkerk</span></div>
-      </div>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow" style="margin-bottom:24px;display:inline-block">Waar wij voor staan</span>
-      <div class="values">
-        <div class="value">
-          <div class="value-num">01</div>
-          <div>
-            <h3>Persoonlijk</h3>
-            <p>Elke leerling is anders en verdient een aanpak die daarbij past. Daarom werkt uw kind met een vaste begeleider die de tijd neemt om te ontdekken hoe uw kind leert, wat wel en niet werkt, en waar de motivatie vandaan komt. Geen wisselende gezichten, maar een vertrouwde klik die de basis vormt voor echte groei.</p>
-          </div>
-        </div>
-        <div class="value">
-          <div class="value-num">02</div>
-          <div>
-            <h3>Stap voor stap</h3>
-            <p>Grote sprongen ontstaan door kleine, haalbare stappen. We stellen samen met uw kind realistische doelen, vieren elk behaald succes en bouwen vanuit vertrouwen verder. Zo wordt vooruitgang zichtbaar en voelbaar, in plaats van een ver-weg doel dat op zichzelf staat.</p>
-          </div>
-        </div>
-        <div class="value">
-          <div class="value-num">03</div>
-          <div>
-            <h3>Met plezier</h3>
-            <p>Leren gaat het beste wanneer het niet als een verplichting voelt. Onze begeleiders combineren effectieve methodes met een luchtige, positieve sfeer, zodat leerlingen niet alleen betere resultaten halen, maar ook weer zin krijgen om te leren.</p>
-          </div>
-        </div>
-        <div class="value">
-          <div class="value-num">04</div>
-          <div>
-            <h3>Samen met ouders</h3>
-            <p>Wij zien begeleiding als een samenwerking. Ouders krijgen heldere en regelmatige updates over de voortgang, korte lijntjes bij vragen, en worden serieus betrokken bij de aanpak — zodat u altijd weet waar uw kind staat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px">
+    <a href="#team" class="chip">Ons team</a>
+    <a href="#verhaal" class="chip">Ons verhaal</a>
+    <a href="#kernwaarden" class="chip">Kernwaarden</a>
   </div>
 </section>
 
 <!-- ============ TEAM ============ -->
 <!--
-  Namen, rollen en foto's hieronder zijn placeholders en moeten door de klant bevestigd worden.
   Opmerking: images/PF_1_.jpg, PF_4.jpg en PF_5.jpg lijken visueel dezelfde persoon te zijn als
-  Latta.jpg, alleen in andere outfits. Om te voorkomen dat de teamsectie hetzelfde gezicht onder
-  twee namen toont, zijn ze hier niet als apart teamlid gebruikt. Zodra bevestigd is wie wie is,
-  kan hier eenvoudig een derde/vierde .tm-card bijgezet worden.
+  Latta.jpg (Amin), alleen in andere outfits. Om te voorkomen dat de teamsectie hetzelfde gezicht
+  onder twee namen toont, zijn ze hier niet als apart teamlid gebruikt.
 -->
 <section class="pad wrap" id="team">
   <div class="sec-head reveal">
@@ -553,22 +506,87 @@
     <p>Maak kennis met de vaste begeleiders die uw kind stap voor stap verder helpen.</p>
   </div>
   <div class="team-grid reveal">
-    <!-- TODO: naam/rol bevestigen -->
     <article class="tm-card">
       <div class="tm-photo">
-        <img src="images/Mo.jpg" alt="Portret van Mo, studiebegeleider bij De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async">
+        <img src="images/Latta.jpg" alt="Portret van Amin Latakwal, eigenaar van De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async" style="transform:scale(1.6);object-position:center 15%">
+      </div>
+      <b class="tm-name">Amin Latakwal</b>
+      <span class="tm-role">Eigenaar</span>
+      <p class="tm-bio">Na het afronden van het gymnasium (Economie &amp; Maatschappij) aan het Erasmiaans Gymnasium, ben ik begonnen aan de studie Rechtsgeleerdheid aan de Universiteit Utrecht. Vanuit de overtuiging dat ieder kind het beste uit zichzelf kan halen, heb ik De Leer Vrienden opgericht om leerlingen écht persoonlijk te begeleiden. Met de juiste steun, aandacht en structuur wil ik hen helpen hun volledige potentieel te benutten.</p>
+    </article>
+    <article class="tm-card">
+      <div class="tm-photo">
+        <img src="images/Mo.jpg" alt="Portret van Mo, relatiecoördinator bij De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async">
       </div>
       <b class="tm-name">Mo</b>
-      <span class="tm-role">Studiebegeleider</span>
+      <span class="tm-role">Relatiecoördinator</span>
+      <p class="tm-bio">Na het afronden van de havo ben ik begonnen aan de opleiding Business IT &amp; Management aan de Hogeschool Rotterdam. Vanuit mijn eigen ervaring weet ik hoe belangrijk het is dat leerlingen overzicht houden en stap voor stap werken aan hun doelen. Daarom sluit ik mijn begeleiding volledig aan op wat zij nodig hebben. Met een gestructureerde en motiverende aanpak help ik hen sterker te worden in hun schoolwerk en met vertrouwen hun toetsen in te gaan.</p>
     </article>
-    <!-- TODO: naam/rol bevestigen -->
-    <article class="tm-card">
-      <div class="tm-photo">
-        <img src="images/Latta.jpg" alt="Portret van Latta, studiebegeleider bij De Leer Vrienden" width="480" height="480" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- ============ ONS VERHAAL ============ -->
+<section class="about pad wrap" id="verhaal">
+  <div class="approach-grid">
+    <div class="approach-visual reveal">
+      <div class="photo">
+        <img src="images/AEST.jpg" alt="Close-up van twee leerlingen die samen iets opzoeken in de atlas" width="900" height="1200" loading="lazy" decoding="async">
       </div>
-      <b class="tm-name">Latta</b>
-      <span class="tm-role">Studiebegeleider</span>
-    </article>
+      <div class="badge-100"><b>2025</b><span>opgericht in Ridderkerk</span></div>
+    </div>
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Ons verhaal</span>
+        <h2>Ontstaan uit een<br>simpele overtuiging.</h2>
+      </div>
+      <p class="about-lead reveal">Elk kind kan leren met plezier en zelfvertrouwen — als de begeleiding maar aansluit bij wie het is.</p>
+      <p class="reveal">De Leer Vrienden is ontstaan vanuit de ervaring dat veel leerlingen niet vastlopen omdat ze het niet kunnen, maar omdat de uitleg, het tempo of de aanpak niet aansluit bij hun manier van leren. We zagen kinderen die thuis aan de keukentafel steeds gefrustreerder raakten, en ouders die niet meer wisten hoe ze konden helpen. Daaruit ontstond het idee voor begeleiding die wél aansluit: persoonlijk, geduldig en gericht op wat een kind daadwerkelijk nodig heeft.</p>
+      <p class="reveal">Onze visie is dat leren begint bij zelfvertrouwen. Een leerling die durft te proberen, fouten mag maken en successen mag vieren, ontwikkelt zich sneller dan een leerling die vooral bezig is met wat er nog niet lukt. Daarom bouwen we bij elk traject eerst aan vertrouwen, en pas daarna verder aan kennis en vaardigheden — want een kind dat in zichzelf gelooft, blijft groeien, ook lang nadat de begeleiding is afgerond.</p>
+      <div class="team-card reveal">
+        <div class="team-av"><img src="images/Mo.jpg" alt="Portret van Mo, relatiecoördinator bij De Leer Vrienden" width="60" height="60" loading="lazy" decoding="async"></div>
+        <div><b>Het team van De Leer Vrienden</b><span>Studiebegeleiders &amp; docenten · Ridderkerk</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KERNWAARDEN ============ -->
+<section class="pad wrap" id="kernwaarden">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Waar wij voor staan</span>
+    <h2>Vier kernwaarden die<br>ons werk bepalen.</h2>
+  </div>
+  <div class="form-card reveal" style="margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto">
+    <div class="values">
+      <div class="value">
+        <div class="value-num">01</div>
+        <div>
+          <h3>Persoonlijk</h3>
+          <p>Elke leerling is anders en verdient een aanpak die daarbij past. Daarom werkt uw kind met een vaste begeleider die de tijd neemt om te ontdekken hoe uw kind leert, wat wel en niet werkt, en waar de motivatie vandaan komt. Geen wisselende gezichten, maar een vertrouwde klik die de basis vormt voor echte groei.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="value-num">02</div>
+        <div>
+          <h3>Stap voor stap</h3>
+          <p>Grote sprongen ontstaan door kleine, haalbare stappen. We stellen samen met uw kind realistische doelen, vieren elk behaald succes en bouwen vanuit vertrouwen verder. Zo wordt vooruitgang zichtbaar en voelbaar, in plaats van een ver-weg doel dat op zichzelf staat.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="value-num">03</div>
+        <div>
+          <h3>Met plezier</h3>
+          <p>Leren gaat het beste wanneer het niet als een verplichting voelt. Onze begeleiders combineren effectieve methodes met een luchtige, positieve sfeer, zodat leerlingen niet alleen betere resultaten halen, maar ook weer zin krijgen om te leren.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="value-num">04</div>
+        <div>
+          <h3>Samen met ouders</h3>
+          <p>Wij zien begeleiding als een samenwerking. Ouders krijgen heldere en regelmatige updates over de voortgang, korte lijntjes bij vragen, en worden serieus betrokken bij de aanpak — zodat u altijd weet waar uw kind staat.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -42,7 +42,6 @@
     font-size:17px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
   }
   h1,h2,h3,h4{color:var(--ink);line-height:1.08;letter-spacing:-.02em;font-weight:800}
   a{color:inherit;text-decoration:none}
@@ -94,7 +93,9 @@
   .brand img{height:34px;width:auto}
   @media(min-width:1001px){
     .nav{padding:20px 24px}
+    .brand{position:fixed;top:14px;left:24px;z-index:80}
     .brand img{height:85px}
+    .approach-grid.reverse{grid-template-columns:1.1fr .9fr}
   }
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{
@@ -472,8 +473,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
   </div>
 </div>
 
@@ -487,46 +488,25 @@
     <p>Van de basisschool tot het examenjaar: voor elke fase de juiste begeleiding. Hieronder leest u precies wat elke dienst inhoudt, voor wie het is en hoe een traject eruitziet.</p>
   </div>
   <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px">
-    <a href="#studiebegeleiding" class="chip">01 · Studiebegeleiding</a>
-    <a href="#cito-training" class="chip">02 · Cito-training</a>
-    <a href="#examentraining" class="chip">03 · Examentraining</a>
-    <a href="#maatwerk" class="chip">04 · Maatwerk</a>
+    <a href="#studiebegeleiding" class="chip">1 · Studiebegeleiding</a>
+    <a href="#cito-training" class="chip">2 · Cito-training</a>
+    <a href="#examentraining" class="chip">3 · Examentraining</a>
+    <a href="#maatwerk" class="chip">4 · Maatwerk</a>
   </div>
 </section>
 
 <!-- ============ DIENST 01: Studiebegeleiding ============ -->
 <section class="pad wrap" id="studiebegeleiding">
   <div class="approach-grid">
-    <div class="approach-visual reveal">
-      <div class="photo">
-        <img src="images/2_KLANTEN.jpg" alt="Twee leerlingen die samen huiswerk maken tijdens studiebegeleiding" width="900" height="1200" loading="lazy" decoding="async">
-      </div>
-      <div class="badge-100"><b>1-op-1</b><span>vaste begeleider</span></div>
-    </div>
     <div>
-      <div class="sec-head reveal">
-        <span class="eyebrow">Dienst 01 · Basis- en voortgezet onderwijs</span>
-        <h2>Studiebegeleiding</h2>
-        <p>Wekelijkse persoonlijke begeleiding waarin uw kind leert plannen, structureren en zelfstandig werken. Voor leerlingen uit het basis- en voortgezet onderwijs, elk leerjaar en elk niveau — met aandacht voor wat écht werkt.</p>
-      </div>
-      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:26px">Plan een gratis proefles <span class="arw">→</span></a>
-    </div>
-  </div>
-
-  <div class="form-card reveal" style="margin-top:56px">
-    <div class="about-grid" style="gap:44px;align-items:start">
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Hoe een traject verloopt</span>
-        <div class="steps" style="margin-top:0">
-          <div class="step"><div class="step-num">01</div><div><h3>Kennismaking</h3><p>Gratis proefles en intakegesprek. We brengen de hulpvraag van uw kind in kaart.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Persoonlijk plan</h3><p>Op basis van niveau en leerstijl stellen we een plan op maat op.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h3>Wekelijkse begeleiding</h3><p>Vaste begeleider, vaste tijd — structuur die rust en resultaat geeft.</p></div></div>
-          <div class="step"><div class="step-num">04</div><div><h3>Voortgang &amp; bijstellen</h3><p>We volgen de resultaten en stellen het plan bij waar nodig.</p></div></div>
+      <div class="approach-visual reveal">
+        <div class="photo">
+          <img src="images/2_KLANTEN.jpg" alt="Twee leerlingen die samen huiswerk maken tijdens studiebegeleiding" width="900" height="1200" loading="lazy" decoding="async">
         </div>
       </div>
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Wat u kunt verwachten</span>
-        <ul class="svc-list" style="gap:16px">
+      <div class="reveal" style="margin-top:28px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Wat u kunt verwachten</span>
+        <ul class="svc-list" style="gap:12px">
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Eigen vaste begeleider</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rekenen, taal en begrijpend lezen, of kernvakken voortgezet onderwijs</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Plannen, structuur &amp; overzicht</li>
@@ -534,42 +514,57 @@
         </ul>
       </div>
     </div>
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">1 · Basis- en voortgezet onderwijs</span>
+        <h2>Studiebegeleiding</h2>
+        <p>Wekelijkse persoonlijke begeleiding waarin uw kind leert plannen, structureren en zelfstandig werken. Voor leerlingen uit het basis- en voortgezet onderwijs, elk leerjaar en elk niveau — met aandacht voor wat écht werkt.</p>
+      </div>
+      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:22px">Plan een gratis proefles <span class="arw">→</span></a>
+
+      <div class="reveal" style="margin-top:36px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Hoe een traject verloopt</span>
+        <div class="steps" style="margin-top:0">
+          <div class="step" style="padding:14px 0"><div class="step-num">1</div><div><h3>Kennismaking</h3><p>Gratis proefles en intakegesprek. We brengen de hulpvraag van uw kind in kaart.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">2</div><div><h3>Persoonlijk plan</h3><p>Op basis van niveau en leerstijl stellen we een plan op maat op.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">3</div><div><h3>Wekelijkse begeleiding</h3><p>Vaste begeleider, vaste tijd — structuur die rust en resultaat geeft.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">4</div><div><h3>Voortgang &amp; bijstellen</h3><p>We volgen de resultaten en stellen het plan bij waar nodig.</p></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ DIENST 02: Cito-training ============ -->
 <section class="about pad wrap" id="cito-training">
-  <div class="approach-grid" style="grid-template-columns:1.1fr .9fr">
+  <div class="approach-grid reverse">
     <div>
       <div class="sec-head reveal">
-        <span class="eyebrow">Dienst 02 · Groep 6 tot en met 8</span>
+        <span class="eyebrow">2 · Groep 6 tot en met 8</span>
         <h2>Cito-training</h2>
         <p>Gerichte voorbereiding op de Cito-doorstroomtoets. We oefenen zowel de leerstof als toetsvaardigheden, zodat uw kind met rust en zelfvertrouwen de toets in gaat.</p>
       </div>
-      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:26px">Plan een gratis proefles <span class="arw">→</span></a>
-    </div>
-    <div class="approach-visual reveal">
-      <div class="photo">
-        <img src="images/_STI8936.jpg" alt="Close-up van twee leerlingen die samen iets opzoeken in de atlas tijdens Cito-training" width="900" height="1200" loading="lazy" decoding="async">
-      </div>
-      <div class="badge-100"><b>Groep 6-8</b><span>Cito-training</span></div>
-    </div>
-  </div>
+      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:22px">Plan een gratis proefles <span class="arw">→</span></a>
 
-  <div class="form-card reveal" style="margin-top:56px">
-    <div class="about-grid" style="gap:44px;align-items:start">
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Hoe een traject verloopt</span>
+      <div class="reveal" style="margin-top:36px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Hoe een traject verloopt</span>
         <div class="steps" style="margin-top:0">
-          <div class="step"><div class="step-num">01</div><div><h3>Nulmeting</h3><p>We brengen het huidige niveau in kaart met een korte toets.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Trainingsplan</h3><p>Gericht oefenen op precies de onderdelen waar winst te behalen is.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h3>Echte toetsvormen</h3><p>Oefenen met opgaven die aansluiten op de echte Cito-toets.</p></div></div>
-          <div class="step"><div class="step-num">04</div><div><h3>Rust &amp; vertrouwen</h3><p>Aandacht voor toetsangst, zodat uw kind ontspannen aan de toets begint.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">1</div><div><h3>Nulmeting</h3><p>We brengen het huidige niveau in kaart met een korte toets.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">2</div><div><h3>Trainingsplan</h3><p>Gericht oefenen op precies de onderdelen waar winst te behalen is.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">3</div><div><h3>Echte toetsvormen</h3><p>Oefenen met opgaven die aansluiten op de echte Cito-toets.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">4</div><div><h3>Rust &amp; vertrouwen</h3><p>Aandacht voor toetsangst, zodat uw kind ontspannen aan de toets begint.</p></div></div>
         </div>
       </div>
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Wat u kunt verwachten</span>
-        <ul class="svc-list" style="gap:16px">
+    </div>
+    <div>
+      <div class="approach-visual reveal">
+        <div class="photo">
+          <img src="images/_STI8936.jpg" alt="Close-up van twee leerlingen die samen iets opzoeken in de atlas tijdens Cito-training" width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:28px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Wat u kunt verwachten</span>
+        <ul class="svc-list" style="gap:12px">
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rekenen, taal en begrijpend lezen</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Echte toetsvormen oefenen</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Toetsangst ombuigen naar rust</li>
@@ -583,36 +578,15 @@
 <!-- ============ DIENST 03: Examentraining ============ -->
 <section class="pad wrap" id="examentraining">
   <div class="approach-grid">
-    <div class="approach-visual reveal">
-      <div class="photo">
-        <img src="images/AMIN_X_HAITAM.jpg" alt="Begeleider werkt samen met een leerling aan examenstof" width="900" height="1200" loading="lazy" decoding="async">
-      </div>
-      <div class="badge-100"><b>VO</b><span>examenklaar</span></div>
-    </div>
     <div>
-      <div class="sec-head reveal">
-        <span class="eyebrow">Dienst 03 · VMBO, HAVO en VWO</span>
-        <h2>Examentraining</h2>
-        <p>Intensieve vakinhoudelijke training in de eindspurt naar het examen. Strategie, routine en rust, door ervaren begeleiders — voor alle niveaus en de meeste kernvakken.</p>
-      </div>
-      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:26px">Plan een gratis proefles <span class="arw">→</span></a>
-    </div>
-  </div>
-
-  <div class="form-card reveal" style="margin-top:56px">
-    <div class="about-grid" style="gap:44px;align-items:start">
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Hoe een traject verloopt</span>
-        <div class="steps" style="margin-top:0">
-          <div class="step"><div class="step-num">01</div><div><h3>Vakanalyse</h3><p>We bepalen samen welke vakken en onderdelen prioriteit hebben.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Examenstrategie</h3><p>Aanpak per vak: welke vragen en onderdelen leveren de meeste punten op.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h3>Intensief oefenen</h3><p>Veel oefenexamens, onder omstandigheden die op het echte examen lijken.</p></div></div>
-          <div class="step"><div class="step-num">04</div><div><h3>De laatste weken</h3><p>Extra intensieve begeleiding in de directe aanloop naar het examen.</p></div></div>
+      <div class="approach-visual reveal">
+        <div class="photo">
+          <img src="images/AMIN_X_HAITAM.jpg" alt="Begeleider werkt samen met een leerling aan examenstof" width="900" height="1200" loading="lazy" decoding="async">
         </div>
       </div>
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Wat u kunt verwachten</span>
-        <ul class="svc-list" style="gap:16px">
+      <div class="reveal" style="margin-top:28px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Wat u kunt verwachten</span>
+        <ul class="svc-list" style="gap:12px">
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Alle kernvakken</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Examenstrategie &amp; planning</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Intensief in de examenperiode</li>
@@ -620,42 +594,57 @@
         </ul>
       </div>
     </div>
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">3 · VMBO, HAVO en VWO</span>
+        <h2>Examentraining</h2>
+        <p>Intensieve vakinhoudelijke training in de eindspurt naar het examen. Strategie, routine en rust, door ervaren begeleiders — voor alle niveaus en de meeste kernvakken.</p>
+      </div>
+      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:22px">Plan een gratis proefles <span class="arw">→</span></a>
+
+      <div class="reveal" style="margin-top:36px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Hoe een traject verloopt</span>
+        <div class="steps" style="margin-top:0">
+          <div class="step" style="padding:14px 0"><div class="step-num">1</div><div><h3>Vakanalyse</h3><p>We bepalen samen welke vakken en onderdelen prioriteit hebben.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">2</div><div><h3>Examenstrategie</h3><p>Aanpak per vak: welke vragen en onderdelen leveren de meeste punten op.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">3</div><div><h3>Intensief oefenen</h3><p>Veel oefenexamens, onder omstandigheden die op het echte examen lijken.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">4</div><div><h3>De laatste weken</h3><p>Extra intensieve begeleiding in de directe aanloop naar het examen.</p></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ DIENST 04: Maatwerk ============ -->
 <section class="about pad wrap" id="maatwerk">
-  <div class="approach-grid" style="grid-template-columns:1.1fr .9fr">
+  <div class="approach-grid reverse">
     <div>
       <div class="sec-head reveal">
-        <span class="eyebrow">Dienst 04 · Elke leeftijd</span>
+        <span class="eyebrow">4 · Elke leeftijd</span>
         <h2>Maatwerk</h2>
         <p>Soms is er net iets meer nodig dan reguliere begeleiding. Voor concentratie, motivatie en zelfvertrouwen bieden we begeleiding op maat, altijd persoonlijk en in overleg met ouders.</p>
       </div>
-      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:26px">Plan een gratis proefles <span class="arw">→</span></a>
-    </div>
-    <div class="approach-visual reveal">
-      <div class="photo">
-        <img src="images/KLANTEN_2.jpg" alt="Leerling krijgt persoonlijke aandacht tijdens maatwerkbegeleiding" width="900" height="1200" loading="lazy" decoding="async">
-      </div>
-      <div class="badge-100"><b>100%</b><span>persoonlijk</span></div>
-    </div>
-  </div>
+      <a href="index.html#proefles" class="btn btn-primary" style="margin-top:22px">Plan een gratis proefles <span class="arw">→</span></a>
 
-  <div class="form-card reveal" style="margin-top:56px">
-    <div class="about-grid" style="gap:44px;align-items:start">
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Hoe een traject verloopt</span>
+      <div class="reveal" style="margin-top:36px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Hoe een traject verloopt</span>
         <div class="steps" style="margin-top:0">
-          <div class="step"><div class="step-num">01</div><div><h3>Gesprek</h3><p>We bespreken samen met u en uw kind wat er precies speelt.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Plan op maat</h3><p>Een aanpak die past bij de situatie van uw kind, geen standaardtraject.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h3>Persoonlijke begeleiding</h3><p>Aandacht voor wat uw kind nodig heeft, in het eigen tempo.</p></div></div>
-          <div class="step"><div class="step-num">04</div><div><h3>Samen evalueren</h3><p>Regelmatig contact over hoe het gaat en wat er eventueel beter kan.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">1</div><div><h3>Gesprek</h3><p>We bespreken samen met u en uw kind wat er precies speelt.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">2</div><div><h3>Plan op maat</h3><p>Een aanpak die past bij de situatie van uw kind, geen standaardtraject.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">3</div><div><h3>Persoonlijke begeleiding</h3><p>Aandacht voor wat uw kind nodig heeft, in het eigen tempo.</p></div></div>
+          <div class="step" style="padding:14px 0"><div class="step-num">4</div><div><h3>Samen evalueren</h3><p>Regelmatig contact over hoe het gaat en wat er eventueel beter kan.</p></div></div>
         </div>
       </div>
-      <div>
-        <span class="eyebrow" style="margin-bottom:20px;display:inline-block">Wat u kunt verwachten</span>
-        <ul class="svc-list" style="gap:16px">
+    </div>
+    <div>
+      <div class="approach-visual reveal">
+        <div class="photo">
+          <img src="images/KLANTEN_2.jpg" alt="Leerling krijgt persoonlijke aandacht tijdens maatwerkbegeleiding" width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:28px">
+        <span class="eyebrow" style="margin-bottom:14px;display:inline-block">Wat u kunt verwachten</span>
+        <ul class="svc-list" style="gap:12px">
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Werken aan zelfvertrouwen</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Concentratie &amp; motivatie</li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Persoonlijk plan op maat</li>

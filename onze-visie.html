@@ -42,7 +42,6 @@
     font-size:17px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
   }
   h1,h2,h3,h4{color:var(--ink);line-height:1.08;letter-spacing:-.02em;font-weight:800}
   a{color:inherit;text-decoration:none}
@@ -94,7 +93,9 @@
   .brand img{height:34px;width:auto}
   @media(min-width:1001px){
     .nav{padding:20px 24px}
+    .brand{position:fixed;top:14px;left:24px;z-index:80}
     .brand img{height:85px}
+    .approach-grid.reverse{grid-template-columns:1.1fr .9fr}
   }
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{
@@ -472,8 +473,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis &amp; voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
   </div>
 </div>
 
@@ -486,17 +487,29 @@
     <h1 style="font-size:clamp(2.4rem,5vw,3.6rem);margin-top:16px;color:var(--ink);font-family:inherit;letter-spacing:-.02em;font-weight:800;line-height:1.08">Onze visie.</h1>
     <p>Waar wij in geloven, en waarom dat de manier is waarop uw kind het beste groeit.</p>
   </div>
+  <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px">
+    <a href="#geloof" class="chip">Waar wij in geloven</a>
+    <a href="#overtuigingen" class="chip">Onze kernovertuigingen</a>
+    <a href="#groei" class="chip">Hoe een kind groeit</a>
+  </div>
 </section>
 
 <!-- ============ WAAR WIJ IN GELOVEN ============ -->
-<section class="about pad" id="geloof">
-  <div class="wrap">
-    <div class="sec-head center reveal" style="max-width:760px">
-      <span class="eyebrow">Waar wij in geloven</span>
-      <h2>Leren met zelfvertrouwen,<br>structuur en plezier.</h2>
-      <p class="about-lead" style="margin-left:auto;margin-right:auto">Een kind dat in zichzelf gelooft, leert sneller, houdt het langer vol en durft door te zetten wanneer iets even niet lukt.</p>
-      <p>Wij geloven dat resultaten pas écht duurzaam zijn wanneer ze gebouwd zijn op zelfvertrouwen. Cijfers alleen zeggen niet alles: een kind dat begrijpt waaróm iets werkt, dat trots is op wat het al kan, en dat weet dat fouten maken bij leren hoort, blijft ook op de lange termijn groeien — op school en daarbuiten.</p>
-      <p>Daarom combineren wij bij elk traject drie dingen: structuur, zodat een kind weet waar het aan toe is; persoonlijke aandacht, zodat de aanpak past bij het kind en niet andersom; en plezier, omdat leren zonder plezier zelden beklijft. Die combinatie is de basis van alles wat we doen.</p>
+<section class="about pad wrap" id="geloof">
+  <div class="approach-grid reverse">
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Waar wij in geloven</span>
+        <h2>Leren met zelfvertrouwen,<br>structuur en plezier.</h2>
+      </div>
+      <p class="about-lead reveal">Een kind dat in zichzelf gelooft, leert sneller, houdt het langer vol en durft door te zetten wanneer iets even niet lukt.</p>
+      <p class="reveal">Wij geloven dat resultaten pas écht duurzaam zijn wanneer ze gebouwd zijn op zelfvertrouwen. Cijfers alleen zeggen niet alles: een kind dat begrijpt waaróm iets werkt, dat trots is op wat het al kan, en dat weet dat fouten maken bij leren hoort, blijft ook op de lange termijn groeien — op school en daarbuiten.</p>
+      <p class="reveal">Daarom combineren wij bij elk traject drie dingen: structuur, zodat een kind weet waar het aan toe is; persoonlijke aandacht, zodat de aanpak past bij het kind en niet andersom; en plezier, omdat leren zonder plezier zelden beklijft. Die combinatie is de basis van alles wat we doen.</p>
+    </div>
+    <div class="approach-visual reveal">
+      <div class="photo">
+        <img src="images/AMIN_X_KLANTEN_2.jpg" alt="Leerlingen die met zelfvertrouwen en plezier samen leren" width="900" height="1200" loading="lazy" decoding="async">
+      </div>
     </div>
   </div>
 </section>
@@ -507,33 +520,35 @@
     <span class="eyebrow">Onze kernovertuigingen</span>
     <h2>Vier overtuigingen die<br>alles bepalen wat we doen.</h2>
   </div>
-  <div class="values reveal" style="margin-top:40px;max-width:820px">
-    <div class="value">
-      <div class="value-num">01</div>
-      <div>
-        <h3>Persoonlijk</h3>
-        <p>Wij geloven dat leren pas goed lukt wanneer een kind zich gezien en begrepen voelt. Daarom staat een vaste begeleider centraal die aansluit bij de leerstijl, het tempo en de persoonlijkheid van uw kind — geen standaardaanpak, maar maatwerk vanaf de eerste les.</p>
+  <div class="form-card reveal" style="margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto">
+    <div class="values">
+      <div class="value">
+        <div class="value-num">01</div>
+        <div>
+          <h3>Persoonlijk</h3>
+          <p>Wij geloven dat leren pas goed lukt wanneer een kind zich gezien en begrepen voelt. Daarom staat een vaste begeleider centraal die aansluit bij de leerstijl, het tempo en de persoonlijkheid van uw kind — geen standaardaanpak, maar maatwerk vanaf de eerste les.</p>
+        </div>
       </div>
-    </div>
-    <div class="value">
-      <div class="value-num">02</div>
-      <div>
-        <h3>Stap voor stap</h3>
-        <p>Vertrouwen bouw je op met haalbare stappen, niet met grote sprongen. Wij geloven in kleine, concrete doelen die zichtbaar succes opleveren, zodat een kind keer op keer ervaart: dit lukt mij. Die ervaring is de motor achter verdere groei.</p>
+      <div class="value">
+        <div class="value-num">02</div>
+        <div>
+          <h3>Stap voor stap</h3>
+          <p>Vertrouwen bouw je op met haalbare stappen, niet met grote sprongen. Wij geloven in kleine, concrete doelen die zichtbaar succes opleveren, zodat een kind keer op keer ervaart: dit lukt mij. Die ervaring is de motor achter verdere groei.</p>
+        </div>
       </div>
-    </div>
-    <div class="value">
-      <div class="value-num">03</div>
-      <div>
-        <h3>Met plezier</h3>
-        <p>Een kind dat met plezier leert, onthoudt meer en geeft minder snel op. Daarom kiezen wij bewust voor een positieve, luchtige sfeer tijdens de begeleiding, zonder dat dit ten koste gaat van resultaat — plezier en resultaat versterken elkaar juist.</p>
+      <div class="value">
+        <div class="value-num">03</div>
+        <div>
+          <h3>Met plezier</h3>
+          <p>Een kind dat met plezier leert, onthoudt meer en geeft minder snel op. Daarom kiezen wij bewust voor een positieve, luchtige sfeer tijdens de begeleiding, zonder dat dit ten koste gaat van resultaat — plezier en resultaat versterken elkaar juist.</p>
+        </div>
       </div>
-    </div>
-    <div class="value">
-      <div class="value-num">04</div>
-      <div>
-        <h3>Samen met ouders</h3>
-        <p>Wij geloven dat begeleiding het sterkst is wanneer school, kind én ouders dezelfde richting op kijken. Daarom houden we ouders actief op de hoogte en betrekken we hen bij de aanpak, zodat de groei van hun kind ook thuis zichtbaar en voelbaar is.</p>
+      <div class="value">
+        <div class="value-num">04</div>
+        <div>
+          <h3>Samen met ouders</h3>
+          <p>Wij geloven dat begeleiding het sterkst is wanneer school, kind én ouders dezelfde richting op kijken. Daarom houden we ouders actief op de hoogte en betrekken we hen bij de aanpak, zodat de groei van hun kind ook thuis zichtbaar en voelbaar is.</p>
+        </div>
       </div>
     </div>
   </div>
