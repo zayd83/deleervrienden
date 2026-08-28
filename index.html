@@ -131,6 +131,10 @@
   .hero-copy,.hero-visual{min-width:0}
   .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.035em}
   .hero h1 .accent{font-size:.96em;display:inline-block}
+  .hero h1 .pf-accent{
+    font-family:'Times New Roman',Times,serif;font-style:italic;font-weight:700;
+    color:var(--green);font-size:.96em;display:inline-block;letter-spacing:-.01em;
+  }
   .hero .lead{font-size:1.18rem;color:var(--body);margin:22px 0 30px;max-width:34ch}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
   .rating-row{display:flex;align-items:center;gap:12px;margin-top:30px}
@@ -272,7 +276,7 @@
   .slide{position:absolute;inset:0;opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
   .slide.active{opacity:1;position:relative;pointer-events:auto}
   .qmark{font-family:'Fraunces',serif;font-weight:600;font-size:3.4rem;color:var(--green);line-height:.6;height:38px}
-  .quote-txt{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;color:#F4F6F2;max-width:24ch}
+  .quote-txt{font-family:'Times New Roman',Times,serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;color:#F4F6F2;max-width:24ch}
   .quote-author{margin-top:24px}
   .quote-author b{color:#fff;font-size:1.05rem;display:block}
   .quote-author span{color:rgba(255,255,255,.6);font-size:.92rem}
@@ -504,7 +508,7 @@
 <section class="hero wrap">
   <div class="hero-grid">
     <div class="hero-copy reveal">
-      <h1>Leren begint met<br><span class="accent">iemand die jou begrijpt.</span></h1>
+      <h1>Leren begint met<br>iemand die jou <span class="pf-accent">begrijpt.</span></h1>
       <p class="lead">Persoonlijke studiebegeleiding voor leerlingen uit het basis- en voortgezet onderwijs. Voor betere resultaten, meer zelfvertrouwen en plezier in leren.</p>
       <div class="hero-cta">
         <a href="#proefles" class="btn btn-primary">Plan een gratis proefles <span class="arw">→</span></a>
@@ -814,7 +818,7 @@
       <h2>Neem <span class="hl">contact</span> met ons op.</h2>
     </div>
 
-    <div class="form-card reveal" style="max-width:820px;margin:0 auto">
+    <div class="form-card reveal" style="max-width:820px;margin:40px auto 0">
       <h3>Stuur ons een bericht</h3>
       <p class="hint">Vul het formulier in, we reageren binnen één werkdag.</p>
       <label class="field-label">Naam</label>
@@ -825,8 +829,8 @@
           <input class="inp" id="cEmail" type="email" placeholder="naam@email.nl" autocomplete="email">
         </div>
         <div>
-          <label class="field-label">Telefoon <span style="color:var(--muted);font-weight:500">(optioneel)</span></label>
-          <input class="inp" id="cPhone" type="tel" placeholder="06 …" autocomplete="tel">
+          <label class="field-label">Telefoon</label>
+          <input class="inp" id="cPhone" type="tel" placeholder="06 …" autocomplete="tel" required>
         </div>
       </div>
       <label class="field-label">Bericht</label>
@@ -1153,6 +1157,7 @@
       contactStatus.style.display='none';
       if(!name){ $('#cName').focus(); shake($('#cName')); return; }
       if(!email){ $('#cEmail').focus(); shake($('#cEmail')); return; }
+      if(!phone){ $('#cPhone').focus(); shake($('#cPhone')); return; }
 
       contactBtn.disabled=true; contactBtn.textContent='Versturen…';
 
