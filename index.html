@@ -81,6 +81,7 @@
   /* Header */
   header{position:sticky;top:0;z-index:50;transition:.3s var(--ease)}
   .nav{
+    position:relative;
     display:flex;align-items:center;justify-content:space-between;gap:20px;
     padding:14px 24px;max-width:calc(var(--maxw) + 24px);margin:0 auto;
   }
@@ -92,6 +93,11 @@
   }
   .brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
   .brand img{height:34px;width:auto}
+  @media(min-width:1001px){
+    .brand{position:absolute;left:24px;top:-10px;z-index:60}
+    .brand img{height:60px}
+    .nav-inner{padding-left:160px}
+  }
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{
     font-size:.95rem;font-weight:600;color:var(--ink);padding:.55em .9em;border-radius:999px;
@@ -461,14 +467,21 @@
   </div>
 </header>
 
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
+  </div>
+</div>
+
 <span id="top"></span>
 
 <!-- ============ HERO ============ -->
 <section class="hero wrap">
   <div class="hero-grid">
     <div class="hero-copy reveal">
-      <span class="eyebrow">Studiebegeleiding · Cito · Examentraining</span>
-      <h1 style="margin-top:18px">Leren begint met<br><span class="accent">iemand die jou begrijpt.</span></h1>
+      <h1>Leren begint met<br><span class="accent">iemand die jou begrijpt.</span></h1>
       <p class="lead">Persoonlijke studiebegeleiding voor leerlingen uit het basis- en voortgezet onderwijs. Voor betere resultaten, meer zelfvertrouwen en plezier in leren.</p>
       <div class="hero-cta">
         <a href="#proefles" class="btn btn-primary">Plan een gratis proefles <span class="arw">→</span></a>
@@ -493,14 +506,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
-    <span>BACK2SCHOOL Deals</span><span>Persoonlijke studiebegeleiding</span><span>Basis- en voortgezet onderwijs</span><span>Fysiek &amp; online</span><span>Gratis proefles</span>
-  </div>
-</div>
 
 <!-- ============ STATS ============ -->
 <section class="stats pad-sm">
